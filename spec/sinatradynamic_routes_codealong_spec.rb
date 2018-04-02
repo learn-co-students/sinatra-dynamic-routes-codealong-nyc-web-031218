@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+require 'pry'
 describe 'app.rb' do
   describe 'GET /goodbye/:name' do
     it 'sends a 200 status code' do
