@@ -13,6 +13,22 @@ class App < Sinatra::Base
     "Hello #{@user_name}!"
   end
 
-  # Code your final two routes here:
+  get "/goodbye/:name" do
+    @user_name = params[:name]
+    "Goodbye, #{@user_name}."
+  end
+
+  get "/multiply/:num1/:num2" do
+    @numbers = params[:num1].to_i * params[:num2].to_i
+      "#{@numbers}"
+    end
+
 
 end
+
+
+#
+# get '/goodbye/:name, a dynamic route that returns "Goodbye, (person's name).", a string.
+# For example, navigating to localhost:9393/goodbye/jerome should display Goodbye, jerome.
+#
+# A dynamic route starting with /multiply that accepts two params (num1 and num2) and returns the product of the two numbers.
